@@ -32,7 +32,6 @@ public class TreeNode {
 
         return result;
     }
-
     List<Integer> inOrder() {
         List<Integer> result = new ArrayList<>();
 
@@ -46,11 +45,19 @@ public class TreeNode {
     List<Integer> preOrder() {
         List<Integer> result = new ArrayList<>();
 
+        result.add(label);
+        if (left != null) result.addAll(left.preOrder());
+        if (right != null) result.addAll(right.preOrder());
+
         return result;
     }
 
     List<Integer> postOrder() {
         List<Integer> result = new ArrayList<>();
+
+        if (left != null) result.addAll(left.postOrder());
+        if (right != null) result.addAll(right.postOrder());
+        result.add(label);
 
         return result;
     }
