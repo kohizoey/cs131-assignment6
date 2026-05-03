@@ -36,6 +36,10 @@ public class TreeNode {
     List<Integer> inOrder() {
         List<Integer> result = new ArrayList<>();
 
+        if (left != null) result.addAll(left.inOrder());
+        result.add(label);
+        if (right != null) result.addAll(right.inOrder());
+
         return result;
     }
 
