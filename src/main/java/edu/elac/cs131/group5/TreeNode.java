@@ -59,6 +59,8 @@ public class TreeNode {
 
         return result;
     }
+
+    /*
     static TreeNode buildTree() {
 
         TreeNode root = new TreeNode(0);
@@ -82,6 +84,7 @@ public class TreeNode {
 
         return root;
     }
+
     public static void main(String[] args) {
 
         TreeNode root = buildTree();
@@ -110,4 +113,5 @@ public class TreeNode {
         }
         sc.close();
     }
+     */
 }
